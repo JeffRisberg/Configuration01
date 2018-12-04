@@ -1,6 +1,8 @@
 package com.company;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.configuration2.CombinedConfiguration;
+import org.apache.commons.configuration2.CompositeConfiguration;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
@@ -34,6 +36,14 @@ public class Main {
         log.info("Gamma {}", gamma);
       }
 
+      CombinedConfiguration combinedConfig = configs.combined(new File("default.properties"));
+      {
+        int alpha = combinedConfig.getInt("alpha");
+        String beta = combinedConfig.getString("beta");
+
+        log.info("Alpha {}", alpha);
+        log.info("Beta {}", beta);
+      }
     } catch (ConfigurationException cex) {
       // Something went wrong
     }
