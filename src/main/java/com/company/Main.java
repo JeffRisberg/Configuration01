@@ -27,8 +27,8 @@ public class Main {
 
       Configuration overrideConfig = configs.properties(new File("override.properties"));
       {
-        int alpha = config.getInt("alpha");
-        String gamma = config.getString("gamma");
+        int alpha = overrideConfig.getInt("alpha");
+        String gamma = overrideConfig.getString("gamma");
 
         log.info("Alpha {}", alpha);
         log.info("Gamma {}", gamma);
