@@ -17,11 +17,23 @@ public class Main {
     try {
       Configuration config = configs.properties(new File("default.properties"));
       // access configuration properties
-      int alpha = config.getInt("alpha");
-      String beta = config.getString("beta");
+      {
+        int alpha = config.getInt("alpha");
+        String beta = config.getString("beta");
 
-      log.info("Alpha {}", alpha);
-      log.info("Beta {}", beta);
+        log.info("Alpha {}", alpha);
+        log.info("Beta {}", beta);
+      }
+
+      Configuration overrideConfig = configs.properties(new File("override.properties"));
+      {
+        int alpha = config.getInt("alpha");
+        String gamma = config.getString("gamma");
+
+        log.info("Alpha {}", alpha);
+        log.info("Gamma {}", gamma);
+      }
+
     } catch (ConfigurationException cex) {
       // Something went wrong
     }
