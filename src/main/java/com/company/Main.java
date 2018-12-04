@@ -40,9 +40,11 @@ public class Main {
       {
         int alpha = combinedConfig.getInt("alpha");
         String beta = combinedConfig.getString("beta");
+        String gamma = combinedConfig.getString("gamma");
 
         log.info("Alpha {}", alpha);
         log.info("Beta {}", beta);
+        log.info("Gamma {}", gamma);
       }
     } catch (ConfigurationException cex) {
       // Something went wrong
