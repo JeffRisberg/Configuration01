@@ -3,6 +3,7 @@ package com.company;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.configuration2.CombinedConfiguration;
 import org.apache.commons.configuration2.Configuration;
+import org.apache.commons.configuration2.builder.BasicConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 
@@ -47,7 +48,7 @@ public class Main {
         log.info("Gamma {}", gamma);
       }
 
-      org.apache.commons.configuration2.builder.DefaultC builder = new DefaultConfigurationBuilder();
+      BasicConfigurationBuilder builder = new BasicConfigurationBuilder();
       builder.setFile(new File("config.xml"));
       Configuration config2 = builder.getConfiguration(true);
 
