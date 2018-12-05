@@ -49,7 +49,7 @@ public class Main {
       }
 
       BasicConfigurationBuilder builder = new BasicConfigurationBuilder();
-      builder.setFile(new File("config.xml"));
+      //builder.setFile(new File("config.xml"));
       Configuration config2 = builder.getConfiguration(true);
 
     } catch (ConfigurationException cex) {
