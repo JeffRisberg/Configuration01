@@ -2,7 +2,6 @@ package com.company;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.configuration2.CombinedConfiguration;
-import org.apache.commons.configuration2.CompositeConfiguration;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
@@ -16,6 +15,7 @@ public class Main {
 
   public Main() {
     Configurations configs = new Configurations();
+
     try {
       Configuration config = configs.properties(new File("default.properties"));
       // access configuration properties
@@ -46,6 +46,11 @@ public class Main {
         log.info("Beta {}", beta);
         log.info("Gamma {}", gamma);
       }
+
+      org.apache.commons.configuration2.builder.DefaultC builder = new DefaultConfigurationBuilder();
+      builder.setFile(new File("config.xml"));
+      Configuration config2 = builder.getConfiguration(true);
+
     } catch (ConfigurationException cex) {
       // Something went wrong
     }
