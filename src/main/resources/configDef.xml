@@ -3,4 +3,5 @@
 <configuration>
   <properties fileName="override.properties"/>
   <properties fileName="default.properties"/>
+  <properties fileName="base.properties"/>
 </configuration>
