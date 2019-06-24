@@ -10,10 +10,10 @@ apply plugin: 'java'
 version = '0.1.0'
 
 ext {
-  slf4jVersion = '1.7.25'
+  slf4jVersion = '1.7.26'
   projectLombokVersion = '1.16.20'
   commonsBeanUtilsVersion = '1.9.3'
-  commonsConfigurationVersion = '2.3'
+  commonsConfigurationVersion = '2.4'
 }
 
 dependencies {
